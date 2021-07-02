@@ -1,10 +1,8 @@
-package org.example.pratice21to40;
+package org.example.practice21to40;
 
 import org.example.dataStructure.ListNode;
 
-import java.util.List;
-
-public class pratice21 {
+public class practice21 {
        //21.
        //将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
        //

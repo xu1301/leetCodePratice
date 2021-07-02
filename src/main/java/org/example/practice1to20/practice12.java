@@ -1,6 +1,6 @@
-package org.example.pratice1to20;
+package org.example.practice1to20;
 
-public class pratice12 {
+public class practice12 {
 
     //12.罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。
     //

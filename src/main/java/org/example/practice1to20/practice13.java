@@ -1,9 +1,9 @@
-package org.example.pratice1to20;
+package org.example.practice1to20;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class pratice13 {
+public class practice13 {
 
 
     //输入：
