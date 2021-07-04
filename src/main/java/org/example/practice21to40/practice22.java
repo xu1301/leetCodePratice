@@ -16,7 +16,7 @@ public class practice22 {
     //输出：["((()))","(()())","(())()","()(())","()()()"]
 
     /**
-     *  回溯算法
+     *  todo 回溯算法
      *  递归
      */
     public List<String> generateParenthesis(int n) {
@@ -24,6 +24,7 @@ public class practice22 {
         for (int i = 0; i < n; i++) {
             fun("(", n);
         }
+        return result;
     }
     public void fun(String temp, int n) {
 
