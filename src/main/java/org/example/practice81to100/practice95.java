@@ -27,7 +27,4 @@ public class practice95 {
      *  1. 遍历n个数字，
      *  2.
      */
-    public List<TreeNode> generateTrees(int n) {
-        List<TreeNode> treeNodeList = new ArrayList<>();
-    }
 }

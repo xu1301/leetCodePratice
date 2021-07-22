@@ -13,5 +13,6 @@ public class practice32 {
         while (left < right) {
 
         }
+        return pos;
     }
 }
