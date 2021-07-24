@@ -36,6 +36,7 @@ public class ThreadPoolTest extends ThreadPoolExecutor {
         for (int i = 0; i < 5; i++) {
             MyThread myThread = new MyThread(String.valueOf(i));
             threadPoolTest.submit(myThread);
+            threadPoolTest.execute();
         }
 
     }
