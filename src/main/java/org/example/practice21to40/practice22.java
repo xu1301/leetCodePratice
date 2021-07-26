@@ -1,6 +1,7 @@
 package org.example.practice21to40;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
@@ -21,31 +22,46 @@ public class practice22 {
      */
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            fun("(", n);
-        }
+        fun("(", n, result);
         return result;
     }
-    public void fun(String temp, int n) {
-
-    }
-    public boolean isValid(String str ) {
-        if (str.length() <= 1) {
-            return false;
+    public void fun(String temp, int n, List<String> result) {
+        if (!isValid(temp,n)) {
+            return;
         }
+        if (temp.length() == 2 * n && isValid(temp,n)) {
+                result.add(temp);
+            return;
+        }
+
+        fun(temp + "(", n,  result);
+        fun(temp + ")", n, result);
+    }
+    public boolean isValid(String str, int n ) {
         Stack<Character> stack = new Stack();
         stack.push(str.charAt(0));
-        int i = 1;
-        while (stack.size() != 0) {
-            if (str.charAt(i) == ')') {
-                if (stack.pop() != '(' ) {
-                    return false;
-                }
+        int i = 0;
+        int count = 0;
+        while (i < str.length()) {
+             if (str.charAt(i) == '(') {
+                 stack.push(str.charAt(i));
+                 count++;
+             } else if(str.charAt(i) == ')') {
+                 if (stack.size() == 0 || stack.pop() != '(') {
+                     return false;
+                 }
+             }
+             i++;
+        }
+        if (count > n) {
+            return false;
+        }
+        Iterator iterator = stack.iterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().equals(')')) {
+                return false;
             }
         }
-        if (stack.size() == 0 ) {
-            return true;
-        }
-        return false;
+        return true;
     }
 }

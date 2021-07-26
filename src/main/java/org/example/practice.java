@@ -17,7 +17,9 @@ import java.util.regex.Pattern;
 public class practice {
     private static Pattern pattern = Pattern.compile("</br>\\s*（\\d）");
     public static void main(String[] args) {
-
+        Character a = '(';
+        char b = '(';
+        System.out.println(a == b);
     }
 
 
