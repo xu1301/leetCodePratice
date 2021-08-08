@@ -1,4 +1,4 @@
-package org.example.codeTest;
+package org.example.ThreadPractice;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

@@ -1,13 +1,8 @@
-package org.example.codeTest;
+package org.example.ThreadPractice;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @Author xuxinyao
@@ -16,8 +11,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class MultiThreadTest implements Callable<String> {
     public void test () {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,10,3000, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<>(), new ThreadPoolExecutor.AbortPolicy());
+//        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,10,3000, TimeUnit.MILLISECONDS,
+//                new LinkedBlockingQueue<>(), new ThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+
     }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         MultiThreadTest multiThreadTest = new MultiThreadTest("thread1");

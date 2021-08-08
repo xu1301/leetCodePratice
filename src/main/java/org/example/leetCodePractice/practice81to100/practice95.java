@@ -1,9 +1,4 @@
-package org.example.practice81to100;
-
-import org.example.dataStructure.TreeNode;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.example.leetCodePractice.practice81to100;
 
 /**
  * @Author xuxinyao

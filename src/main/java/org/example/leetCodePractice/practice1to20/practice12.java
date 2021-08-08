@@ -1,4 +1,4 @@
-package org.example.practice1to20;
+package org.example.leetCodePractice.practice1to20;
 
 public class practice12 {
 

@@ -1,8 +1,6 @@
-package org.example.practice21to40;
+package org.example.leetCodePractice.practice21to40;
 
 import org.example.dataStructure.ListNode;
-
-import java.util.List;
 
 public class practice24 {
 

@@ -1,4 +1,4 @@
-package org.example.codeTest;
+package org.example.ThreadPractice;
 
 /**
  * @Author xuxinyao
