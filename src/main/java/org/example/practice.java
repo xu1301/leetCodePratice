@@ -3,6 +3,8 @@ package org.example;
 import org.example.dataStructure.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -17,11 +19,20 @@ import java.util.regex.Pattern;
 public class practice {
     private static Pattern pattern = Pattern.compile("</br>\\s*（\\d）");
     public static void main(String[] args) {
-        Character a = '(';
-        char b = '(';
-        System.out.println(a == b);
+        String str = "123";
+        String str1 = new String("123");
+        HashSet set = new HashSet();
+        set.add(str);
+        set.add(str1);
+        set.add("asd");
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.printf(String.valueOf(str.equals(str1)));
     }
-
+    protected String string;
+    String def;
 
     //[1,2]
     //[1,null,2]

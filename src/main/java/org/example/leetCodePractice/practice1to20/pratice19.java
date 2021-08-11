@@ -1,9 +1,7 @@
-package org.example.practice1to20;
+package org.example.leetCodePractice.practice1to20;
 
 import org.example.dataStructure.ListNode;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Stack;
 
 /**

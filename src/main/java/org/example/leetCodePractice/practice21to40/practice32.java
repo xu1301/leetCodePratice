@@ -1,4 +1,4 @@
-package org.example.practice21to40;
+package org.example.leetCodePractice.practice21to40;
 
 /**
  * @Author xuxinyao

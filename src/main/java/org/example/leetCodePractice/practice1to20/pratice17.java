@@ -1,6 +1,5 @@
-package org.example.practice1to20;
+package org.example.leetCodePractice.practice1to20;
 
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
