@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @Author xuxinyao
- * @Description: 二叉树的三种遍历方式
+ * @Description: 二叉树的三种 深度遍历方式（前序、中序、后序）
  * @Date 2021/8/9/21:33
  */
 public class Traversal {
