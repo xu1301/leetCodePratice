@@ -3,6 +3,7 @@ package org.example.ThreadPractice;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * @Author xuxinyao
@@ -16,6 +17,7 @@ public class MultiThreadTest implements Callable<String> {
 
     }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        AbstractQueuedSynchronizer
         MultiThreadTest multiThreadTest = new MultiThreadTest("thread1");
         MultiThreadTest multiThreadTest2 = new MultiThreadTest("thread2");
         FutureTask<String> futureTask = new FutureTask<>(multiThreadTest);
