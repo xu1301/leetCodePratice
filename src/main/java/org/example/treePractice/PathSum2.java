@@ -3,6 +3,7 @@ package org.example.treePractice;
 import org.example.dataStructure.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -18,32 +19,27 @@ public class PathSum2 {
      * @param targetSum
      * @return
      */
+    List<List<Integer>> result = new ArrayList<>();
+    Deque<Integer> onePath = new LinkedList<>();
+
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
-        List<List<Integer>> result = new ArrayList<>();
-        if (root == null ){
-            return result;
-        }
-        List<Integer> onePath = new ArrayList<>();
-        recursionSum(root,result,onePath, targetSum);
+        recursionSum(root, targetSum);
         return result;
     }
-    public void recursionSum(TreeNode node, List<List<Integer>> result, List<Integer> onePath, int targetSum) {
-        List<Integer> onPathTemp = new ArrayList<>();
-        onePath.add(node.val);
-        for (Integer i : onePath) {
-            onPathTemp.add(i);
+
+    public void recursionSum(TreeNode node, int targetSum) {
+        if (node == null) {
+            return;
         }
-        if (node.left == null && node.right == null ){
-            if(targetSum - node.val == 0) {
-                result.add(onePath);
+        onePath.add(node.val);
+        if (node.left == null && node.right == null) {
+            if (targetSum - node.val == 0) {
+                result.add(new ArrayList<>(onePath));
             }
         }
-        if (node.left != null) {
-            recursionSum(node.left, result, onPathTemp, targetSum - node.val);
-        }
-        if (node.right != null) {
-            recursionSum(node.right,result,onPathTemp,targetSum - node.val);
-        }
+        recursionSum(node.left, targetSum - node.val);
+        recursionSum(node.right, targetSum - node.val);
+        onePath.pollLast();
     }
 
 //    public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
