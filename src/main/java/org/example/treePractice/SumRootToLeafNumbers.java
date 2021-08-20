@@ -13,7 +13,25 @@ public class SumRootToLeafNumbers {
      * @return
      */
     int sum=0;
+    StringBuilder stringBuilder = new StringBuilder();
     public int sumNumbers(TreeNode root) {
-
+        if (root == null) {
+            return 0;
+        }
+        recursionSum(root);
+        return sum;
+    }
+    public void recursionSum(TreeNode node) {
+        stringBuilder.append(node.val);
+        if (node.right == null && node.left == null && stringBuilder.length() > 0) {
+            sum += Integer.parseInt(stringBuilder.toString());
+        }
+        if (node.left != null) {
+            recursionSum(node.left);
+        }
+        if (node.right != null) {
+            recursionSum(node.right);
+        }
+        stringBuilder.deleteCharAt(stringBuilder.length()-1);
     }
 }

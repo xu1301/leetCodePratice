@@ -3,7 +3,6 @@ package org.example.treePractice;
 import org.example.dataStructure.TreeNode;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
