@@ -24,6 +24,6 @@ public class CountCompleteTreeNodes {
         return count;
     }
 
-    //todo 进阶做法
+    //todo log n^2进阶做法
 
 }
