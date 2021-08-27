@@ -17,7 +17,7 @@ public class MultiThreadTest implements Callable<String> {
 
     }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        AbstractQueuedSynchronizer
+
         MultiThreadTest multiThreadTest = new MultiThreadTest("thread1");
         MultiThreadTest multiThreadTest2 = new MultiThreadTest("thread2");
         FutureTask<String> futureTask = new FutureTask<>(multiThreadTest);

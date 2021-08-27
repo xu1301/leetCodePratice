@@ -1,5 +1,6 @@
 package org.example.treePractice;
 
+import com.sun.deploy.util.StringUtils;
 import org.example.dataStructure.TreeNode;
 
 import java.util.ArrayList;
@@ -7,41 +8,30 @@ import java.util.List;
 
 /**
  * @author xuxinyao
- * @since 2021/8/27/10:58
+ * @since 2021/8/25/20:59
  */
 public class BinaryTreePaths {
     /**
-     * <a href="https://leetcode-cn.com/problems/binary-tree-paths/">二叉树的所有路径</a>
-     * @param root
-     * @return
+     * <a href="https://leetcode-cn.com/problems/binary-tree-paths/">二叉树的所有路径</a>>
      */
-    List<String> result= new ArrayList<>();
+
+    List<String> result = new ArrayList<>();
     public List<String> binaryTreePaths(TreeNode root) {
-        List<Integer> onePath = new ArrayList<>();
-        recursion(root, onePath);
+        List<String> onepath = new ArrayList<>();
+        recursionBuild(root,onepath);
         return result;
     }
-    public void recursion(TreeNode node, List<Integer> onePath) {
-        if (node == null) {
-            return;
-        } else {
-            onePath.add(node.val);
-        }
-        if (node.right == null && node.left == null) {
-            StringBuilder one = new StringBuilder();
-            for (int i = 0; i < onePath.size(); i++) {
-                one.append(onePath.get(i));
-                if (i != onePath.size() - 1) {
-                    one.append("->");
-                }
-            }
-            result.add(one.toString());
-            onePath.remove(onePath.size() - 1);
-            return;
-        }
 
-        recursion(node.left, onePath);
-        recursion(node.right, onePath);
+    private void recursionBuild(TreeNode node, List<String> onePath) {
+        if (node.left == null && node.right == null) {
+            String oneResult = "";
+            oneResult += onePath;
+            result.add(oneResult);
+            return;
+        }
+        onePath.add(String.valueOf(node.val));
+        recursionBuild(node.left, onePath);
+        recursionBuild(node.right, onePath);
         onePath.remove(onePath.size() - 1);
     }
 }

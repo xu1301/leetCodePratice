@@ -45,5 +45,6 @@ public class practice34 {
         if(flag) {
 
         }
+        return nums;
     }
 }

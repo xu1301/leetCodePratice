@@ -12,6 +12,6 @@ public class UniqueBinarySearchTrees {
      * @return
      */
     public int numTrees(int n) {
-        
+        return 1;
     }
 }
